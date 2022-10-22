@@ -43,3 +43,25 @@ document.getElementById('calculator').addEventListener('click',function(event){
     }
 })
 // pin setup end
+// message notification start code
+document.getElementById('verify-btn').addEventListener('click',function(){
+    // generate pin
+    var successMessage = document.getElementById('display-pin');
+    var currentSuccessMessage = successMessage.value;
+    // matching pin
+    var failorMessage = document.getElementById('input-cals-field')
+    var currentFailorMessage = failorMessage.value;
+
+    var Success = document.getElementById('success')
+    var Failor = document.getElementById('failor')
+
+    if(currentSuccessMessage === currentFailorMessage){
+         Success.style.display = 'block'
+         Failor.style.display = 'none'
+    }
+    else{
+        Failor.style.display = 'block'
+        Success.style.display = 'none'
+    }
+}) 
+// message notification end code
